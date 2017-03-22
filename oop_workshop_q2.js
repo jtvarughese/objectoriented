@@ -1,4 +1,3 @@
-// Question 2
 // Person constructor
 function Person(gender, age, name) {
   this.gender = gender
@@ -17,13 +16,6 @@ function Student(gender, age, name){
 function School() {
   this.persons = []
 }
-// teacher objects
-var Amanda = new Teacher("female", 32, "Amanda")
-// student objects
-var Becky = new Student("female", 8, "Becky")
-var Timmy = new Student("male", 9, "Timmy")
-var Michael = new Student("male", 8, "Michael")
-
 //displaying info
 Person.prototype.displayAllInfo = function(){
   return this.gender + "," + this.age + "," + this.name
@@ -32,15 +24,21 @@ Person.prototype.displayAllInfo = function(){
 Teacher.prototype = Object.create(Person.prototype)
 Student.prototype = Object.create(Person.prototype)
 
-// var school = new School()
-
 // adding people to the school
 School.prototype.addPerson = function(person){
   this.persons.push(person)
 }
-//using object methods
-school.addPerson(Becky);
-school.addPerson(Amanda);
+// teacher objects
+var amanda = new Teacher("female", 32, "Amanda")
+// student objects
+var becky = new Student("female", 8, "Becky")
+var timmy = new Student("male", 9, "Timmy")
+var michael = new Student("male", 8, "Michael")
 
-console.log(Becky.displayAllInfo())
-console.log(Amanda.displayAllInfo())
+var school = new School()
+//using object methods
+school.addPerson(becky);
+school.addPerson(amanda);
+
+console.log(becky.displayAllInfo())
+console.log(amanda.displayAllInfo())
