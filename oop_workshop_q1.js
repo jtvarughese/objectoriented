@@ -9,7 +9,8 @@ function Photo(filepath,location){
   this.filepath = filepath;
   this.location = location;
 }
-//list of photos
+//list of photos with names and locations
+//as strings
 var mountain = new Photo("mountain.jpg","Arizona");
 var lake = new Photo("lake.jpg","California");
 var beach = new Photo("beach.jpg","Florida");
@@ -17,7 +18,19 @@ var beach = new Photo("beach.jpg","Florida");
 Album.prototype.insertPic = function(photo) {
   this.photos.push(photo)
 }
-
+//inserting one pic into album
 var album = new Album()
 album.insertPic(mountain)
-console.log(album);
+// console.log(album);
+
+// for loop to add pics to album
+function insertPic(Photo) {
+  var Photo = 0;
+  for (var i = 0; i < Photo.length; i++) {
+    if (selectObject.selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+// console.log(Photo)
